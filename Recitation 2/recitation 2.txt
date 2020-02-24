@@ -1,0 +1,18 @@
+Recitation 2:
+
+Walk through of jupyter notebook: Application of k-clustering to image compressing.ipynb (~15min)
+- line-by-line walk through of an implementation of Kruskal-based k-clustering heuristic
+- big picture overview of two other baseline heuristics for k-clustering
+- comparison of the performance of the three k-clustering heuristics in image compression
+
+Walk through of jupyter notebook: LCS.ipynb (~30min)
+- brief review of the longest common subsequence problem and the DP formulation
+- big picture overview of brute force implementation for LCS
+- line-by-line walk through of an naive implementation of DP for LCS with full DP table
+- line-by-line walk through of how to reduce memory usage by keeping track of only two columns of the DP table
+- line-by-line walk through of a DP implementation which outputs not only the length of LCS but also the actual LCS
+- applications of LCS: DNA comparison
+
+Walk through of jupyter notebook: Local Search Graph Coloring.ipynb (~15min)
+- brief review of graph coloring and local search
+- line-by-line walk through of an implementation of a local search idea that tries to improve a feasible graph coloring
