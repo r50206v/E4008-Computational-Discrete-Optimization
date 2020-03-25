@@ -1,0 +1,18 @@
+You can always increase the playback speed of the videos by adjusting "settings->playback speed" :)
+
+Assigning workers to shifts: LP formulation & gurobi implementation
+- video can be accessed using your Columbia email at
+  https://drive.google.com/file/d/1QezT8bgTcuFu6NyQrhIDotcWN5Etz-Pj/view?usp=sharing
+- related file: workforce.ipynb
+- this file contains an implementation of the LP formulation of the assignment problem,
+- it contains the code to find an Irreducible Inconsistent Subsystem (IIS), namely, a subset of the constraints that cannot be satisfied at the same time but removing any one constraint from the subset makes the subsystem feasible
+- in the video I give a line-by-line walk-through of the code
+
+Deciding which plants to close: MIP formulation & gurobi implementation
+- video can be accessed using your Columbia email at
+  https://drive.google.com/file/d/12O7rsKhsOvT7FbV_ft4ElbvIn_CSTrjf/view?usp=sharing
+- related file: facility.py, facility_explain.pdf
+- the facility.py file contains an implementation of the MIP formulation of the problem of deciding which plants to shut down to minimize fixed cost + transportation cost while still satisfying the demands at warehouses
+- it includes shortcuts to add a set of variables/constraints using one function call
+- in the video I first introduce the problem and explain how to formulate it as a MIP and then give a line-by-line walk-through of the code
+- I made a mistake in the first half: the "we don't need if [B] then [A]" part in facility_explain.pdf that I pointed to when explaining the MIP formulation is wrong: the [B] part should be a summation over warehouses, not plants. I corrected the mistake in the uploaded pdf file.
