@@ -1,0 +1,80 @@
+Academic license - for non-commercial use only
+Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
+Variable types: 0 continuous, 246512 integer (246512 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e-05, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+01]
+Found heuristic solution: objective 141.9467651
+Presolve time: 3.72s
+Presolved: 246513 rows, 246512 columns, 738544 nonzeros
+Variable types: 0 continuous, 246512 integer (246512 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11628    2.9102018e+02   0.000000e+00   2.272972e+04      5s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.190484e+02, 3013 iterations, 3.09 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  319.04837    0   28  141.94677  319.04837   125%     -    7s
+H    0     0                     319.0426508  319.04837  0.00%     -    9s
+
+Explored 1 nodes (3014 simplex iterations) in 9.08 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 319.043 141.947 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.190426507781e+02, best bound 3.190483700120e+02, gap 0.0018%
+AET: 0.02149848882344641
+AVB: 0.018806483472534136
+AVGO: 0.027581385529834725
+CAH: 0.013900490429568773
+CCL: 0.010151244956998566
+CELG: 0.04213811591450845
+CME: 0.007511857617358851
+DAL: 0.007027262707090595
+DISCK: 0.006015851175895857
+DLTR: 0.0035077966950372505
+DVN: 0.030925387447846106
+ETN: 0.03788242208343985
+FISV: 0.09677619204725436
+FOX: 0.004159156753935476
+FRT: 0.029432139208586915
+GIS: 0.014649872751402173
+GOOGL: 0.06274676627312778
+HCA: 0.005769946840956755
+HLT: 0.001312267740809617
+IP: 0.00664153873735868
+ITW: 0.08548241486968024
+IVZ: 0.07703085897842553
+KSS: 0.005154655580108269
+LEN: 0.00970802307978736
+MMC: 0.060065369392230145
+NEM: 0.0006872166875476717
+NOC: 0.02476610975735246
+NSC: 0.008535574973770556
+NWSA: 0.0005908917798148397
+ORLY: 0.02646473797609487
+PEP: 0.037017195269046704
+PNC: 0.05041823893032676
+TJX: 0.009810713069528973
+TMO: 0.07707923360169225
+TXN: 0.014478652045366056
+VFC: 0.011242644352103605
+VLO: 0.006281911603862754
+VZ: 0.002254724216909264
+WDC: 0.00581301722921615
+XEL: 0.03868314940014407

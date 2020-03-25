@@ -1,0 +1,59 @@
+Academic license - for non-commercial use only
+Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
+Variable types: 0 continuous, 246512 integer (246512 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e-05, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective 135.4473514
+Presolve time: 3.61s
+Presolved: 246513 rows, 246512 columns, 738544 nonzeros
+Variable types: 0 continuous, 246512 integer (246512 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   17323    2.6683213e+02   0.000000e+00   1.991816e+04      5s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.999282e+02, 4182 iterations, 3.41 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     299.9282358  299.92824  0.00%     -    7s
+
+Explored 0 nodes (4182 simplex iterations) in 7.92 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 299.928 135.447 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.999282358111e+02, best bound 2.999282358111e+02, gap 0.0000%
+AET: 0.022872497859741176
+AMGN: 0.05160299286156053
+AVGO: 0.03984435252794537
+DAL: 0.008179130381279024
+DISCK: 0.007920708051722658
+DVN: 0.033887484445330844
+FISV: 0.14188934729266545
+FRT: 0.04823862268112107
+GOOGL: 0.0627467662731278
+ITW: 0.14094010139575638
+IVZ: 0.09722959805567961
+JWN: 0.010168855017222853
+LEN: 0.009708023079787364
+MMC: 0.06438068282478097
+PEP: 0.052614616562155554
+PNC: 0.053075448499591046
+TMO: 0.08684475458895893
+VFC: 0.02289095659756663
+VLO: 0.006281911603862757
+XEL: 0.038683149400144085
