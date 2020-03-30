@@ -1,5 +1,5 @@
 
-Gurobi 8.1.1 (mac64, Python) logging started Wed Mar 25 10:56:52 2020
+Gurobi 8.1.1 (mac64, Python) logging started Mon Mar 30 18:40:57 2020
 
 Academic license - for non-commercial use only
 Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
@@ -10,7 +10,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 2e+01]
 Found heuristic solution: objective 135.4473514
-Presolve time: 3.61s
+Presolve time: 4.20s
 Presolved: 246513 rows, 246512 columns, 738544 nonzeros
 Variable types: 0 continuous, 246512 integer (246512 binary)
 
@@ -21,19 +21,19 @@ Showing first log only...
 Root simplex log...
 
 Iteration    Objective       Primal Inf.    Dual Inf.      Time
-   17323    2.6683213e+02   0.000000e+00   1.991816e+04      5s
+       0    4.9600000e+02   4.760000e+02   1.446010e+09      6s
 Concurrent spin time: 0.00s
 
 Solved with dual simplex
 
-Root relaxation: objective 2.999282e+02, 4182 iterations, 3.41 seconds
+Root relaxation: objective 2.999282e+02, 4182 iterations, 4.14 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-*    0     0               0     299.9282358  299.92824  0.00%     -    7s
+*    0     0               0     299.9282358  299.92824  0.00%     -    9s
 
-Explored 0 nodes (4182 simplex iterations) in 7.92 seconds
+Explored 0 nodes (4182 simplex iterations) in 9.44 seconds
 Thread count was 4 (of 4 available processors)
 
 Solution count 2: 299.928 135.447 
@@ -41,7 +41,7 @@ Solution count 2: 299.928 135.447
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.999282358111e+02, best bound 2.999282358111e+02, gap 0.0000%
 
-Gurobi 8.1.1 (mac64, Python) logging started Wed Mar 25 10:57:27 2020
+Gurobi 8.1.1 (mac64, Python) logging started Mon Mar 30 18:41:25 2020
 
 Academic license - for non-commercial use only
 Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
@@ -52,7 +52,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 4e+01]
 Found heuristic solution: objective 141.9467651
-Presolve time: 3.72s
+Presolve time: 3.74s
 Presolved: 246513 rows, 246512 columns, 738544 nonzeros
 Variable types: 0 continuous, 246512 integer (246512 binary)
 
@@ -63,20 +63,20 @@ Showing first log only...
 Root simplex log...
 
 Iteration    Objective       Primal Inf.    Dual Inf.      Time
-   11628    2.9102018e+02   0.000000e+00   2.272972e+04      5s
+    6414    2.0679408e+02   0.000000e+00   4.809583e+03      5s
 Concurrent spin time: 0.00s
 
 Solved with dual simplex
 
-Root relaxation: objective 3.190484e+02, 3013 iterations, 3.09 seconds
+Root relaxation: objective 3.190484e+02, 3013 iterations, 3.36 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  319.04837    0   28  141.94677  319.04837   125%     -    7s
+     0     0  319.04837    0   28  141.94677  319.04837   125%     -    8s
 H    0     0                     319.0426508  319.04837  0.00%     -    9s
 
-Explored 1 nodes (3014 simplex iterations) in 9.08 seconds
+Explored 1 nodes (3014 simplex iterations) in 9.49 seconds
 Thread count was 4 (of 4 available processors)
 
 Solution count 2: 319.043 141.947 
@@ -84,7 +84,7 @@ Solution count 2: 319.043 141.947
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.190426507781e+02, best bound 3.190483700120e+02, gap 0.0018%
 
-Gurobi 8.1.1 (mac64, Python) logging started Wed Mar 25 10:58:05 2020
+Gurobi 8.1.1 (mac64, Python) logging started Mon Mar 30 18:41:53 2020
 
 Academic license - for non-commercial use only
 Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
@@ -95,7 +95,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 6e+01]
 Found heuristic solution: objective 139.0282879
-Presolve time: 3.85s
+Presolve time: 3.98s
 Presolved: 246513 rows, 246512 columns, 738544 nonzeros
 Variable types: 0 continuous, 246512 integer (246512 binary)
 
@@ -111,15 +111,15 @@ Concurrent spin time: 0.00s
 
 Solved with dual simplex
 
-Root relaxation: objective 3.336418e+02, 2577 iterations, 3.37 seconds
+Root relaxation: objective 3.336418e+02, 2577 iterations, 3.04 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
      0     0  333.64177    0   54  139.02829  333.64177   140%     -    8s
-H    0     0                     333.6372221  333.64177  0.00%     -   10s
+H    0     0                     333.6372221  333.64177  0.00%     -    9s
 
-Explored 1 nodes (2579 simplex iterations) in 10.25 seconds
+Explored 1 nodes (2579 simplex iterations) in 9.62 seconds
 Thread count was 4 (of 4 available processors)
 
 Solution count 2: 333.637 139.028 

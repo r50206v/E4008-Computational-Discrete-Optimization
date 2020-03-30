@@ -1,43 +1,12 @@
-Academic license - for non-commercial use only
-Optimize a model with 246513 rows, 246512 columns and 738544 nonzeros
-Variable types: 0 continuous, 246512 integer (246512 binary)
-Coefficient statistics:
-  Matrix range     [1e+00, 1e+00]
-  Objective range  [4e-05, 1e+00]
-  Bounds range     [1e+00, 1e+00]
-  RHS range        [1e+00, 6e+01]
-Found heuristic solution: objective 139.0282879
-Presolve time: 3.85s
-Presolved: 246513 rows, 246512 columns, 738544 nonzeros
-Variable types: 0 continuous, 246512 integer (246512 binary)
-
-Deterministic concurrent LP optimizer: primal and dual simplex
-Showing first log only...
-
-
-Root simplex log...
-
-Iteration    Objective       Primal Inf.    Dual Inf.      Time
-    6127    2.2045427e+02   0.000000e+00   4.660900e+03      5s
-Concurrent spin time: 0.00s
-
-Solved with dual simplex
-
-Root relaxation: objective 3.336418e+02, 2577 iterations, 3.37 seconds
-
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0  333.64177    0   54  139.02829  333.64177   140%     -    8s
-H    0     0                     333.6372221  333.64177  0.00%     -   10s
-
-Explored 1 nodes (2579 simplex iterations) in 10.25 seconds
-Thread count was 4 (of 4 available processors)
-
-Solution count 2: 333.637 139.028 
+Presolve time: 3.98s
+Root relaxation: 3.04 seconds
+Explored 1 nodes (2579 simplex iterations) in 9.62 seconds
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.336372220672e+02, best bound 3.336417690350e+02, gap 0.0014%
+
+used time: 18.293503046035767
+
 AET: 0.021498488823446415
 AMD: 0.00026478741156514183
 AVB: 0.01880648347253414
