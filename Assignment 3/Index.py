@@ -10,9 +10,13 @@ import re
 import os
 import sys
 import math
+import time
 import random
 import itertools
 from gurobipy import *
+
+
+start_time = time.time()
 
 
 if len(sys.argv) < 2:
@@ -102,6 +106,10 @@ model.addConstrs(
 ## Run and enjoy
 model.update()
 model.optimize()
+
+
+end_time = time.time()
+print('used time: %s' % str(end_time - start_time))
 
 
 # calculate each proportion of investing stocks
