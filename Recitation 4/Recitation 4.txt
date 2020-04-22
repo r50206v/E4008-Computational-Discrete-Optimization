@@ -1,0 +1,15 @@
+You can always increase the playback speed of the videos by adjusting "settings->playback speed" :)
+
+Gale-Shapley and GS Extended: implementation
+- Video can be accessed using your Columbia email at https://drive.google.com/file/d/1jNlH1c-Y3mJbcF57Lad2-C3lgyZg3q6x/view?usp=sharing
+- Related file: Gale_Shapley.ipynb
+- This file contains an implementation of the GS stable matching algorithm and an implementation of the GS extended algorithm for finding a pareto-optimal matching. It also has helper functions to generate matching instances, find blocking pairs of a given matching, compare two matchings, etc.
+- In the video I give a line-by-line walk-through of the code
+
+Graph Coloring IP formulation: IP explained, gurobi implementation
+- Video can be accessed using your Columbia email at https://drive.google.com/file/d/1TLSG4QGMaS3f02mQs5JEWDewpdp4YSlp/view?usp=sharing
+- Related file: Graph_Coloring.ipynb, IP for graph coloring.pdf
+- The pdf file explains how to formulate graph coloring as an IP problem
+- The ipynb file contains an implementation of the graph coloring IP
+- In the video I first explain how to formulate graph coloring as an IP and then give a line-by-line walk-through of the implementation
+
