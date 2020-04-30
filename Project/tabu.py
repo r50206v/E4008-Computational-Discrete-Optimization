@@ -75,7 +75,12 @@ def tabu_search(
                 cand_perf = neighborDict['best_neighbor_perf']
 
                 last_element_index = len(tabuSeries.nonzero()[0]) - 1
-                tabuSeries.loc[ last_element_index + 1 ] = neighborDict['best_neighbor']
+                # we should prevent tabu search came back to the same point
+                # so adding exchange rule in opposite order to the tabu list
+                tabuSeries.loc[ last_element_index + 1 ] =(
+                    neighborDict['best_neighbor'][1], 
+                    neighborDict['best_neighbor'][0]
+                )
                 if len(tabuSeries.nonzero()[0]) > tabu_list_size:
                     tabuSeries = tabuSeries.drop(0).reset_index(drop=True, name='ExchangeRule')
 
