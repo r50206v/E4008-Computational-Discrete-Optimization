@@ -115,11 +115,13 @@ def checkFeasible(
     return cond1 and cond2 and cond3 and cond4
 
 
-def getReturn(stock, return_series):
-    return return_series[stock]
+def getReturn(stock, return_df):
+    return return_df[stock].iloc[-1] - return_df[stock].iloc[0]
 
 
 def getPortfolioReturn(series, return_df, details=False):
+    portfolio_df = return_df.loc[:, series.iloc[series.nonzero()].index]
     if details:
-        print(return_df.loc[series.iloc[series.nonzero()].index])
-    return return_df.loc[series.iloc[series.nonzero()].index].sum()
+        print(portfolio_df.iloc[[0, -1], :])
+    return (portfolio_df.iloc[-1].sum() - portfolio_df.iloc[0].sum()) / portfolio_df.iloc[0].sum()
+
