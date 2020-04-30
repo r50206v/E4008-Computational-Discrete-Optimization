@@ -14,11 +14,14 @@ from tabu_helper import *
 
 def tabu_search(
     return_df, params, tabu_list_size=20, iterations_times=1000, early_stop=30, 
-    neighbor_size=50, asp_improve_level=-3, seed=1
+    neighbor_size=50, asp_improve_level=-3, seed=1,
+    test_return_df=None
 ):
     # initialize
     best_perfList = []
+    best_test_perfList = []
     cand_perfList = []
+    cand_test_perfList = []
 
     best_perf = float("-inf")
     best_series = None
@@ -33,6 +36,12 @@ def tabu_search(
         seed=seed
     )
     cand_perf = getPortfolioReturn(cand, return_df)
+    best_perfList.append(cand_perf)
+    cand_perfList.append(cand_perf)
+    
+    if isinstance(test_return_df, pd.DataFrame):
+        cand_test_perfList.append(getPortfolioReturn(cand, test_return_df))
+        best_test_perfList.append(getPortfolioReturn(cand, test_return_df))
     tabuSeries = pd.Series(0, index=list(range(tabu_list_size)), name='ExchangeRule')
     current_early_stop = deepcopy(early_stop)
     
@@ -77,9 +86,13 @@ def tabu_search(
             else:
                 current_early_stop -= 1
 
+
             iterations_times -= 1
             best_perfList.append(best_perf)
             cand_perfList.append(cand_perf)
+            if isinstance(test_return_df, pd.DataFrame):
+                cand_test_perfList.append(getPortfolioReturn(cand, test_return_df))
+                best_test_perfList.append(getPortfolioReturn(best_series, test_return_df))
 
 
             pbar.update(1)
@@ -87,6 +100,8 @@ def tabu_search(
     return {
         "best_perfList": best_perfList, 
         "cand_perfList": cand_perfList,
+        "cand_test_perfList": cand_test_perfList,
+        "best_test_perfList": best_test_perfList,
         "best_series": best_series,
         "best_perf": best_perf,
         "iterations": iterations_times,
