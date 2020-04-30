@@ -31,7 +31,7 @@ def tabu_search(
     
     # find a feasible starting point 
     cand = generate_start_point(
-        return_df.index.values.tolist(), 
+        return_df.columns.values.tolist(), 
         params["inv_sectorMap"], 
         int((params['snum_ub'] + params['snum_lb'])/2), 
         params,
