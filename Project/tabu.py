@@ -26,6 +26,8 @@ def tabu_search(
     best_perf = float("-inf")
     best_series = None
     
+    iterations_times_copy = deepcopy(iterations_times)
+    
     
     # find a feasible starting point 
     cand = generate_start_point(
@@ -104,6 +106,6 @@ def tabu_search(
         "best_test_perfList": best_test_perfList,
         "best_series": best_series,
         "best_perf": best_perf,
-        "iterations": iterations_times,
+        "iterations": iterations_times_copy - iterations_times + 1,
         "early_stop": current_early_stop
     }
