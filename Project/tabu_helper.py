@@ -60,13 +60,13 @@ def find_neighbors(series, return_df, params, neighbor_size=10, seed=100):
     # removing stocks from the portfolio
     if len(selectStocks) > params['snum_lb']:
         neighborList.extend([
-            (i,"") for i in np.random.choice(selectStocks, size=int(neighbor_size/3), replace=False)
+            (i,"") for i in np.random.choice(selectStocks, size=min(int(neighbor_size/3), len(selectStocks)), replace=False)
         ])
 
     # adding stocks to the portfolio
     if len(selectStocks) < params['snum_ub']:
         neighborList.extend([
-            ("",j) for j in np.random.choice(unselectStocks, size=int(neighbor_size/3), replace=False)
+            ("",j) for j in np.random.choice(unselectStocks, size=min(int(neighbor_size/3), len(unselectStocks)), replace=False)
         ])
         
         
@@ -80,6 +80,7 @@ def find_neighbors(series, return_df, params, neighbor_size=10, seed=100):
         if exc[0]: 
             tmp.loc[exc[0]] = 0
             return_change += -1 * getReturn(exc[0], return_df)
+            
         # if the second position (adding to the portfolio) has a stock
         if exc[1]:
             tmp.loc[exc[1]] = 1
