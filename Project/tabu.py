@@ -1,4 +1,5 @@
 import sys
+import time
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
@@ -18,6 +19,7 @@ def tabu_search(
     test_return_df=None
 ):
     # initialize
+    start_time = time.time()
     best_perfList = []
     best_test_perfList = []
     cand_perfList = []
@@ -103,7 +105,8 @@ def tabu_search(
 
 
             pbar.update(1)
-
+    
+    end_time = time.time()
     return {
         "best_perfList": best_perfList, 
         "cand_perfList": cand_perfList,
@@ -112,5 +115,6 @@ def tabu_search(
         "best_series": best_series,
         "best_perf": best_perf,
         "iterations": iterations_times_copy - iterations_times + 1,
-        "early_stop": current_early_stop
+        "early_stop": current_early_stop,
+        "used_time": end_time - start_time
     }
