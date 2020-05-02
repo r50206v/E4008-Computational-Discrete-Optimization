@@ -14,19 +14,20 @@ from tabu import tabu_search
 
 
 currentPath = os.getcwd()
-with open(currentPath + '/clean_data/sectorMap.pkl', 'rb') as f:
+projectPath = currentPath + '/../'
+with open(projectPath + '/clean_data/sectorMap.pkl', 'rb') as f:
     sectorMap = pickle.load(f)
     
-with open(currentPath + '/clean_data/inv_sectorMap.pkl', 'rb') as f:
+with open(projectPath + '/clean_data/inv_sectorMap.pkl', 'rb') as f:
     inv_sectorMap = pickle.load(f)
 
-with open(currentPath + '/clean_data/ratingMap.pkl', 'rb') as f:
+with open(projectPath + '/clean_data/ratingMap.pkl', 'rb') as f:
     ratingMap = pickle.load(f)
     
-train = pd.read_csv(currentPath + '/clean_data/train.csv', index_col=0)
-test = pd.read_csv(currentPath + '/clean_data/test.csv', index_col=0)
-corr = pd.read_csv(currentPath + '/clean_data/corr.csv', index_col=0)
-varDF = pd.read_csv(currentPath + '/clean_data/var.csv', index_col=0)
+train = pd.read_csv(projectPath + '/clean_data/train.csv', index_col=0)
+test = pd.read_csv(projectPath + '/clean_data/test.csv', index_col=0)
+corr = pd.read_csv(projectPath + '/clean_data/corr.csv', index_col=0)
+varDF = pd.read_csv(projectPath + '/clean_data/var.csv', index_col=0)
 
 train.index = pd.DatetimeIndex(train.index)
 test.index = pd.DatetimeIndex(test.index)
@@ -72,5 +73,5 @@ for vs in list(itertools.product(*tuple(GridParams.values()))):
     testResult[vs] = tabu_search(**g_param)
     gc.collect()
     
-with open(os.getcwd() + '/result/grid_search.pkl', 'wb') as f:
+with open(projectPath + '/result/grid_search.pkl', 'wb') as f:
     pickle.dump(testResult, f, pickle.HIGHEST_PROTOCOL)
