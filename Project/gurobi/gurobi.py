@@ -103,17 +103,17 @@ model.addConstr(
 
 
 # run the model
-model.update()
-model.optimize()
-
-
-# calculate the optimal solution on test set
-selectedStocks = []
-for i in stockList:
-    if abs(stocks[i].X):
-        selectedStocks.append(i)
-print(selectedStocks)
-
 model.write(currentPath + "/portfolio.lp")
-model.write(currentPath + "/portfolio.mps")
-model.write(currentPath + "/portfolio.sol")
+# model.update()
+# model.optimize()
+
+
+# # calculate the optimal solution on test set
+# selectedStocks = []
+# for i in stockList:
+#     if abs(stocks[i].X):
+#         selectedStocks.append(i)
+# print(selectedStocks)
+
+# model.write(currentPath + "/portfolio.mps")
+# model.write(currentPath + "/portfolio.sol")
